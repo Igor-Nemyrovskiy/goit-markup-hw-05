@@ -433,7 +433,6 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
 }
 
 .footer-info {
@@ -525,7 +524,9 @@ img {
 }
 
 .footer-form {
+  margin-left: auto;
 }
+
 .footer-form-subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -615,7 +616,7 @@ img {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -652,13 +653,20 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  fill: #e7e9fc;
+  border-color: #e7e9fc;
   stroke-width: 1px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover,
